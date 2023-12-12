@@ -20,12 +20,18 @@ const bannerImg = document.querySelector('.banner-img');
 const arrowLeft = document.querySelector('.arrow_left');
 const arrowRight = document.querySelector('.arrow_right');
 const dots = document.querySelectorAll('.dot'); 
+
 let currentIndex = 0;
 
+
+// les flèches 
+
 arrowLeft.addEventListener("click",()=> {
+	currentIndex = (currentIndex - 1)
 	console.log ("vous avez cliqué sur la flèche gauche")
 });
 
 arrowRight.addEventListener("click",()=> {
+	currentIndex = (currentIndex + 1)
 	console.log ("vous avez cliqué sur la flèche droite")
 });
