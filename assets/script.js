@@ -18,7 +18,7 @@ const slides = [
 ]
 const arrowLeft = document.querySelector('.arrow_left');
 const arrowRight = document.querySelector('.arrow_right');
-
+const dots = document.querySelectorAll('.dot'); 
 
 arrowLeft.addEventListener("click",()=> {
 	console.log ("vous avez cliqué sur la flèche gauche")
