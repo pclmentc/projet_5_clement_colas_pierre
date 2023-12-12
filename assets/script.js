@@ -24,7 +24,7 @@ const dots = document.querySelectorAll('.dot');
 let currentIndex = 0;
 
 
-// les flèches 
+// les flèches: 
 
 arrowLeft.addEventListener("click",()=> {
 	currentIndex = (currentIndex - 1)
