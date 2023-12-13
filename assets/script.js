@@ -23,19 +23,29 @@ const nombreSlides = slides.length;
 const bannerImg = document.querySelector('.banner-img');
 const arrowLeft = document.querySelector('.arrow_left');
 const arrowRight = document.querySelector('.arrow_right');
-const dots = document.querySelectorAll('.dot'); 
+const dots = document.querySelector('.dots');
+
 
 let currentIndex = 0;
 
 // Fonction pour mettre à jour les points indicateurs
 function updateDots(index) {
-    dots.forEach((dot, i) => {
+	const _dots = document.querySelectorAll('.dot');
+    _dots.forEach((dot, i) => {
         if (i === index) {
             dot.classList.add('dot_selected'); // Ajoutez la classe pour le point actuel
         } else {
             dot.classList.remove('dot_selected'); // Supprimez la classe pour les autres points
         }
     });
+}
+function createDots(){
+	
+	for (const slide of slides) { // peut etre remplacer par un for classique
+		let dot = document.createElement("div"); // creer ton element div
+		dot.classList.add('dot'); // tu lui assigne une classe dot
+		dots.appendChild(dot); // tu inject la dot dans le container dots
+	}
 }
 // Mettre à jour l'image
 	function updateImage(){
@@ -66,5 +76,7 @@ arrowRight.addEventListener("click",()=> {
 });
 
 // Mettre à jour l'image initiale
+createDots();
 updateImage();
 updateText();
+
