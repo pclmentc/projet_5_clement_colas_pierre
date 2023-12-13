@@ -66,3 +66,4 @@ arrowRight.addEventListener("click",()=> {
 
 // Mettre à jour l'image initiale
 updateImage();
+updateText();
