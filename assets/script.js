@@ -19,7 +19,7 @@ const slides = [
 	}
 ]   
 // valeurs constantes   
-
+const nombreSlides = slides.length;
 const bannerImg = document.querySelector('.banner-img');
 const arrowLeft = document.querySelector('.arrow_left');
 const arrowRight = document.querySelector('.arrow_right');
