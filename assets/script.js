@@ -50,14 +50,15 @@ function updateText(){
 }
 // les flèches:
 arrowLeft.addEventListener("click",()=> {
-	currentIndex = (currentIndex - 1)
+	// Utilisez l'opérateur modulo (%) pour gérer le défilement circulaire
+	currentIndex = (currentIndex - 1 + nombreSlides) % nombreSlides;
 	updateDots(currentIndex);
 	updateImage();
 	updateText();
 	console.log (`vous avez cliqué sur la flèche gauche`)
 });
 arrowRight.addEventListener("click",()=> {
-	currentIndex = (currentIndex + 1)
+	currentIndex = (currentIndex + 1 ) % nombreSlides;
 	updateDots(currentIndex);
 	updateImage();
 	updateText();
