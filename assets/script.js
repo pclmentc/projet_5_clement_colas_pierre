@@ -1,3 +1,5 @@
+// Images deroulantes banner
+
 const slides = [
 	{
 		"image":"slide1.jpg",
@@ -16,6 +18,8 @@ const slides = [
 		"tagLine":"Autocollants <span>avec découpe laser sur mesure</span>"
 	}
 ]
+// valeurs constantes   
+
 const bannerImg = document.querySelector('.banner-img');
 const arrowLeft = document.querySelector('.arrow_left');
 const arrowRight = document.querySelector('.arrow_right');
@@ -24,7 +28,7 @@ const dots = document.querySelectorAll('.dot');
 let currentIndex = 0;
 
 
-// les flèches: 
+// les flèches:
 
 arrowLeft.addEventListener("click",()=> {
 	currentIndex = (currentIndex - 1)
