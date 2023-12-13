@@ -37,16 +37,32 @@ function updateDots(index) {
         }
     });
 }
+// Mettre à jour l'image
+	function updateImage(){
+    const imagePath = `assets/images/slideshow/${slides[currentIndex].image}`;
+    bannerImg.src = imagePath;
+    bannerImg.alt = `Slide ${currentIndex + 1}`;
+}
+// Mettre à jour le text
+function updateText(){
+	const tagLine = slides[currentIndex].tagLine;
+    document.querySelector('p').innerHTML = tagLine;
+}
 // les flèches:
-
 arrowLeft.addEventListener("click",()=> {
 	currentIndex = (currentIndex - 1)
 	updateDots(currentIndex);
-	console.log ("vous avez cliqué sur la flèche gauche")
+	updateImage();
+	updateText();
+	console.log (`vous avez cliqué sur la flèche gauche`)
 });
-
 arrowRight.addEventListener("click",()=> {
 	currentIndex = (currentIndex + 1)
 	updateDots(currentIndex);
-	console.log ("vous avez cliqué sur la flèche droite")
+	updateImage();
+	updateText();
+	console.log (`vous avez cliqué sur la flèche droite`)
 });
+
+// Mettre à jour l'image initiale
+updateImage();
