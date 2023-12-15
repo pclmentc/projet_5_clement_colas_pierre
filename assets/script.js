@@ -46,6 +46,7 @@ function createDots(){
 		dot.classList.add('dot'); // tu lui assigne une classe dot
 		dots.appendChild(dot); // tu inject la dot dans le container dots
 	}
+	updateDots(currentIndex);// Sélectionnez la première diapositive au chargement de la page
 }
 // Mettre à jour l'image
 	function updateImage(){
